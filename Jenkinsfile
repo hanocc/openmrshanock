@@ -5,5 +5,8 @@ node('UBUNTU'){
      stage('package'){
       sh 'mvn package'
      }  
+     stage('archiveartifacts'){
+         archive 'appsfortesting/target/*.war'
+     }
 
 }
